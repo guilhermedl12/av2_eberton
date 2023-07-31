@@ -2,6 +2,7 @@
 session_start();
 
 $_SESSION['usuario'] = "";
+
     /*$i = 0;
     foreach($_SESSION['itens'] as $item){  
         echo $i .  $item['desc'] . " - " . $item['vl']. "<br>";
@@ -11,9 +12,9 @@ $_SESSION['usuario'] = "";
     if(isset($_POST['logar']))
         if(isset($_POST['usuario']) && isset($_POST['nome']) && isset($_POST['endereco'])){
             $_SESSION['usuario'] = array(
-                'usuario' => $_POST['usuario'],
-                'nome' => $_POST['nome'],
-                'endereco' => $_POST['endereco']
+                    'usuario' => $_POST['usuario'],
+                    'nome' => $_POST['nome'],
+                    'endereco' => $_POST['endereco']
 
             ); 
 
@@ -32,7 +33,7 @@ $_SESSION['usuario'] = "";
     <script src='main.js'></script>
 </head>
 <body>
-    <form action="compras.php" method="post">
+     
         <table>
             <tr>
                 <th colspan="2">Dados do Usuário</th>
@@ -81,6 +82,7 @@ $_SESSION['usuario'] = "";
             </tr>
 
             <?php
+                        $i++;   
                     }
                 }
             
