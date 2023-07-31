@@ -50,9 +50,33 @@ $valorTotal = (isset($_SESSION['usuario']['valortotal']) ? $_SESSION['usuario'][
     <form action="dadospag.php" method="post">
         <table>
             <tr>
-                
+                <th colspan="4">Dados do Pagamento</th>
             </tr>
-
+            <tr>
+                <th>#</th>
+                <th>Método de Pagamento</th>
+                <th colspan="2">Dados da Cobranca</th>
+            </tr>
+            <tr>
+                <td><input type="radio" name="metpag" value="credito"></td>
+                <td>Crédito à Vista</td>
+                <td>Número do Cartão</td>
+                <td><input type="text" name="numcartao-avista"></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="metpag" value="pix"></td>
+                <td>PIX</td>
+                <td>Número do PIX</td>
+                <td>4545454545454</td>
+            </tr>
+            <tr>
+                <th colspan="2"></th>
+                <th>Valor Total</th>
+                <th><?php echo $valorTotal; ?></th>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="submit" name="pagar" value="Pagar"></td>
+            </tr>
         </table>
 </body>
 
