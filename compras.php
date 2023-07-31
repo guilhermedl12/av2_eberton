@@ -32,13 +32,18 @@ if(isset($_POST['comprar'])){
         
     }
     if($ni > 0){
-      for($i = 0;$i < $ni; $i++){  
-        echo $i .  $_SESSION['itens'][$i]['desc'] . " - " . $_SESSION['itens'][$i]['vl']. "<br>";  
-    }
- }
- echo 'Valor Total ' . $valorTotal;
+        $_SESSION['valortotal'] = $valorTotal;
 
- $_SESSION['valortotal'] = $valorTotal;
+        header('Location: usuario.php', true, 303);
+
+      /*for($i = 0;$i < $ni; $i++){  
+        echo $i .  $_SESSION['itens'][$i]['desc'] . " - " . $_SESSION['itens'][$i]['vl']. "<br>";  
+    }*/
+    }
+ 
+    //echo 'Valor Total ' . $valorTotal;
+
+    
 }
 
 ?>
