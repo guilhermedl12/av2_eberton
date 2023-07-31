@@ -54,7 +54,7 @@ $_SESSION['usuario'] = "";
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="submit" name="comprar" value="Logar">
+                    <input type="submit" name="logar" value="logar">
                 </td>
             </tr>
         </table>
