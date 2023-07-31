@@ -21,7 +21,7 @@ $_SESSION['usuario'] = "";
             header('Location: dadospag.php', true, 303);
         }
     }    
-    
+
 ?>
 
 <!DOCTYPE html>
