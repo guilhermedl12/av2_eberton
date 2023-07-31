@@ -9,7 +9,7 @@ $_SESSION['usuario'] = "";
         $i++;
     }*/
 
-    if(isset($_POST['logar']))
+    if(isset($_POST['logar'])){
         if(isset($_POST['usuario']) && isset($_POST['nome']) && isset($_POST['endereco'])){
             $_SESSION['usuario'] = array(
                     'usuario' => $_POST['usuario'],
@@ -20,6 +20,8 @@ $_SESSION['usuario'] = "";
 
             header('Location: dadospag.php', true, 303);
         }
+    }    
+    
 ?>
 
 <!DOCTYPE html>
