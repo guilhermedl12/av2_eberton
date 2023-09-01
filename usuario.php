@@ -94,5 +94,6 @@ $_SESSION['usuario'] = "";
                 <th>Valor Total</th>
                 <th><?php echo $_SESSION['valortotal'] ?></th>
             </tr>
+    </table>
 </body>
 </html>

@@ -14,7 +14,7 @@ if(isset($_POST['pagar'])){
         $numcartao_avista = (isset($_POST['numcartao-avista']) ? $_POST['numcartao-avista'] : "");
         $numcartao_credito = (isset($_POST['numcartao-credito']) ? $_POST['numcartao-credito'] : "");
 
-        $_SESSION['dadospag'] = array('metpag' => $metpag,
+        $_SESSION['dadospag1'] = array('metpag' => $metpag,
                                         'numcartao-avista' => $numcartao_avista,
                                         'numcartao-credito' => $numcartao_credito);
                                         
@@ -72,10 +72,16 @@ if(isset($_POST['pagar'])){
                 <th colspan="2">Dados da Cobranca</th>
             </tr>
             <tr>
+                <td><input type="radio" name="metpag" value="deb-avista"></td>
+                <td>Débito à Vista</td>
+                <td>Número do Cartão</td>
+                <td><input type="text" name="numcartao-avista"></td>
+            </tr>
+            <tr>
                 <td><input type="radio" name="metpag" value="credito"></td>
                 <td>Crédito à Vista</td>
                 <td>Número do Cartão</td>
-                <td><input type="text" name="numcartao-avista"></td>
+                <td><input type="text" name="numcartao-credito"></td>
             </tr>
             <tr>
                 <td><input type="radio" name="metpag" value="pix"></td>
